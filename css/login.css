@@ -1,0 +1,180 @@
+/* Import font modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Background gradient kuning - oranye - hijau */
+.gradient-custom-2 {
+  background: linear-gradient(to right, #f9f871, #58d68d);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* Animasi gradasi bergerak */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+  }
+}
+
+/* Kotak login */
+.login-box {
+  max-width: 420px;
+  margin: 5% auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 35px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Judul */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* Form input */
+.form-outline {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.form-outline .form-control {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 14px 12px;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-outline .form-control:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 6px rgba(39, 174, 96, 0.4);
+  outline: none;
+}
+
+/* Label */
+.form-outline label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  transition: 0.2s ease all;
+  color: #7f8c8d;
+  pointer-events: none;
+  background-color: #fff;
+  padding: 0 6px;
+  font-size: 14px;
+}
+
+/* Efek label naik */
+.form-outline input:focus + label,
+.form-outline input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #27ae60;
+}
+
+/* Tombol login */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #f6d365, #27ae60);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-login:hover {
+  background: linear-gradient(to right, #27ae60, #f6d365);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* Overlay */
+  .popup {
+      display: none; /* supaya tidak muncul saat halaman dibuka */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 350px;
+      width: 90%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .popup-content h2 {
+      margin-bottom: 10px;
+      color: #d32f2f;
+    }
+
+    .popup-content p {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .icon-error {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .btn-daftar {
+      background: #fbc02d;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .btn-daftar:hover {
+      background: #f9a825;
+    }

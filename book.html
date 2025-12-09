@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> DYTA Biopharma </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Leaflet CSS untuk Peta Gratis -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
+  <!-- Custom Map Styles -->
+  <style>
+    #googleMap {
+      height: 400px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .map_container {
+      position: relative;
+    }
+
+    /* Custom marker popup style */
+    .leaflet-popup-content-wrapper {
+      border-radius: 8px;
+    }
+
+    .custom-popup {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .custom-popup h4 {
+      color: #ffbe33;
+      margin-bottom: 5px;
+    }
+  </style>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/Gedung Pabrik.png" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              DYTA Biopharma
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Beranda </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Tentang Kami</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="book.html">Lokasi <span class="sr-only">(current)</span> </a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="#" class="user_link"
+              onclick="showPopup('popupLogin'); return false;">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </a>
+              <a class="cart_link" href="#"
+              onclick="showPopup('popupLogin'); return false;">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                  <g>
+                    <g>
+                      <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                   c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                   C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                   c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                   C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                   c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                    </g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                </svg>
+              </a>
+              <form class="form-inline">
+              </form>
+              <a href="#" class="order_online"
+              onclick="showPopup('popupLogin'); return false;">
+                Pesan Sekarang
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+<!-- Lokasi Pabrik Section -->
+<section class="book_section layout_padding" style="padding:40px 0;">
+  <div class="container">
+    <!-- Judul Lokasi -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <h2 style="font-size:2rem; font-weight:700; margin-bottom:10px; color:#333;">
+        📍 Lokasi Pabrik
+      </h2>
+      <hr style="width:80px; border:2px solid #f39c12; margin:auto;">
+    </div>
+
+    <!-- Peta -->
+    <div class="map_container">
+      <div id="googleMap" style="width:100%; height:500px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);"></div>
+    </div>
+  </div>
+</section>
+<!-- end Lokasi Section -->
+
+<!-- Denah Pabrik Section -->
+<section class="book_section layout_padding" style="padding:40px 0; background:#f9f9f9;">
+  <div class="container">
+    <!-- Judul Denah -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <h2 style="font-size:2rem; font-weight:700; margin-bottom:10px; color:#333;">
+        🏭 Denah Pabrik
+      </h2>
+      <hr style="width:80px; border:2px solid #27ae60; margin:auto;">
+    </div>
+
+    <!-- Gambar Denah -->
+    <div style="text-align:center;">
+      <img src="images/Lokasi.jpg" 
+           alt="Factory Layout" 
+           style="max-width:100%; height:auto; border:1px solid #ddd; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</section>
+<!-- end Denah Section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Hubungi Kami
+            </h4>
+            <div class="contact_link_box">
+              <a href="#" onclick="return false;">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Lokasi
+                </span>
+              </a>
+              <a href="#" onclick="return false;">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Telepon +62 711 987 654
+                </span>
+              </a>
+              <a href="#" onclick="return false;">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  dytabiopharma@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              DYTA Biopharma
+            </a>
+            <p>
+              We believe that science is the foundation of healing.
+Through innovation in sterile and non-sterile pharmaceutical production, we are committed to delivering safe, effective, and high-quality medicines.
+            </p>
+            <div class="footer_social">
+              <a href="#" onclick="return false;">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#" onclick="return false;">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#" onclick="return false;">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="#" onclick="return false;">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" onclick="return false;">
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Jam Buka
+          </h4>
+          <p>
+            Setiap hari
+          </p>
+          <p>
+            10.00 - 22.00 WIB
+          </p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">Free Html Templates</a><br><br>
+          &copy; <span id="displayYear"></span> Distributed By
+          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  
+  <!-- Leaflet JavaScript untuk Peta Gratis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  
+  <!-- Peta Gratis Script - Ganti Google Maps -->
+  <script>
+    // Initialize Free Map with Leaflet
+    function initFreeMap() {
+      // Koordinat Jakarta (ganti sesuai lokasi restoran Anda)
+      var restaurantLocation = [-2.900694, 104.718359]; // Jakarta
+      
+      // Buat peta
+      var map = L.map('googleMap').setView(restaurantLocation, 15);
+
+      // Tambahkan tile layer (peta dasar)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+   var factoryIcon = L.divIcon({
+  className: 'custom-div-icon',
+  html: "<div style='background-color: #ffbe33; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;'><i class='fa fa-building' style='color: white; font-size: 14px;'></i></div>",
+  iconSize: [30, 30],
+  iconAnchor: [15, 15]
+});
+
+// Tambahkan marker
+var marker = L.marker(restaurantLocation, { icon: factoryIcon }).addTo(map);
+
+      // Popup untuk marker
+      var popupContent = `
+        <div class="custom-popup">
+          <h4>🏢 DYTA Biopharma</h4>
+          <p><strong>📍 Lokasi Kami</strong></p>
+          <p>📞 Telepon +62 711 987 654</p>
+          <p>🕙 10.00 - 22.00 WIB</p>
+          <br>
+          <small style="color: #666;">Klik pada peta untuk mendapatkan arah</small>
+        </div>
+      `;
+      
+      marker.bindPopup(popupContent, {
+        maxWidth: 250,
+        className: 'restaurant-popup'
+      }).openPopup();
+
+      // Event klik pada peta untuk mendapatkan koordinat
+      map.on('click', function(e) {
+        var lat = e.latlng.lat.toFixed(6);
+        var lng = e.latlng.lng.toFixed(6);
+        
+        // Buat popup sementara
+        L.popup()
+          .setLatLng(e.latlng)
+          .setContent(`
+            <div style="text-align: center;">
+              <strong>📍 Koordinat</strong><br>
+              Lat: ${lat}<br>
+              Lng: ${lng}<br>
+              <small>Tutup popup ini dengan klik X</small>
+            </div>
+          `)
+          .openOn(map);
+      });
+
+      // Zoom control customization
+      map.zoomControl.setPosition('topright');
+
+      // Add scale
+      L.control.scale({
+        imperial: false,
+        maxWidth: 100
+      }).addTo(map);
+    }
+
+    // Jalankan peta setelah halaman selesai dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+      initFreeMap();
+    });
+
+    // Fungsi untuk kompatibilitas (jika ada script lain yang memanggil myMap)
+    function myMap() {
+      initFreeMap();
+    }
+  </script>
+
+<!-- ========== POPUP LOGIN / REGISTER ========== -->
+<div id="popupLogin" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popupLogin')">&times;</span>
+    <h2>Selamat Datang di DYTA Biopharma</h2>
+    <p>Silakan pilih untuk melanjutkan:</p>
+    <div class="popup-buttons">
+      <a href="login.html" class="btn-option login-btn">Masuk</a>
+      <a href="register.html" class="btn-option register-btn">Daftar Akun</a>
+    </div>
+  </div>
+</div>
+
+<!-- Link ke CSS dan JS -->
+<link rel="stylesheet" href="css/style.css">
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

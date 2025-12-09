@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Apotek Resmi</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #f9f871, #b7f774, #a6e39a);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      padding: 35px;
+      background: #fff;
+    }
+
+    .register-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .register-title span {
+      color: #27ae60;
+    }
+
+    .form-control {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 15px;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .form-control:focus {
+      border-color: #27ae60;
+      box-shadow: 0 0 6px rgba(39,174,96,0.5);
+      outline: none;
+    }
+
+    .btn-register {
+      border-radius: 10px;
+      padding: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      background: linear-gradient(to right, #f9f871, #58d68d);
+      color: #2c3e50;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-register:hover {
+      transform: scale(1.03);
+      opacity: 0.95;
+    }
+
+    .form-check {
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .requirements {
+      background: #f9fff5;
+      border: 1px solid #d4edda;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 25px;
+    }
+
+    .requirements h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #27ae60;
+    }
+
+    .requirements ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .requirements li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .requirements li i {
+      color: #27ae60;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .illustration {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .illustration img {
+      max-width: 80px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <section class="min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card">
+            <div class="illustration">
+              <img src="images/LOGO GMP Fiks.png">
+              <h2 class="register-title">Daftar <span>Akun Apotek</span></h2>
+            </div>
+            
+            <!-- Form Register -->
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nama Apotek" required />
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nomor Izin Apotek (SIA)" required />
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nama Apoteker Penanggung Jawab" required />
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="No. STRA / SIPA" required />
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Alamat Lengkap Apotek" required />
+              </div>
+
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email Resmi Apotek" required />
+              </div>
+
+              <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password" required />
+              </div>
+
+              <div class="form-check d-flex justify-content-start mb-3">
+                <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+                <label class="form-check-label ms-2" for="agreeTerms">
+                  Saya menyetujui <a href="#">Syarat & Ketentuan</a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-register w-100">
+                <i class="bi bi-hospital"></i> Daftar Apotek
+              </button>
+              <p class="note">Pendaftaran hanya berlaku untuk Apotek dengan izin resmi</p>
+            </form>
+
+            <!-- Persyaratan -->
+            <div class="requirements mt-4">
+              <h5><i class="bi bi-file-earmark-text"></i> Syarat Pendaftaran</h5>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Memiliki Nomor Izin Apotek (SIA) aktif</li>
+                <li><i class="bi bi-check-circle-fill"></i> Apoteker penanggung jawab dengan STRA/SIPA valid</li>
+                <li><i class="bi bi-check-circle-fill"></i> Email resmi apotek untuk verifikasi</li>
+                <li><i class="bi bi-check-circle-fill"></i> Alamat apotek yang jelas dan terdaftar</li>
+              </ul>
+              <div class="illustration">
+                <img src="https://cdn-icons-png.flaticon.com/512/4320/4320358.png" alt="Documents">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
